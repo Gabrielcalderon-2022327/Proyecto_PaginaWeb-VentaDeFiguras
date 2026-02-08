@@ -1,0 +1,20 @@
+const email = "gabriel@gmail.com";
+const contra = "12345";
+
+document.getElementById("formulario").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const in_email = document.getElementById("username").value.trim();
+    const in_contra = document.getElementById("password").value.trim();
+
+    if(!in_email.endsWith("@gmail.com") && !in_email.endsWith("@outlook.com") && !in_email.endsWith("@yahoo.com")){
+        alert("El correo debería tener estas extensiones: @gmail.com, @outlook.com, @yahoo.com");
+        return;
+    }
+
+    if(email === in_email && contra === in_contra){
+        window.location.href= "https://www.youtube.com";
+    } else{
+        alert("Credenciales incorrectas");
+    }
+})
