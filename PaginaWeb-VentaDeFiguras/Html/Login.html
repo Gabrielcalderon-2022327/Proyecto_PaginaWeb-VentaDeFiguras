@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es>
+<html lang="es">
 <head>
     <meta charset=" UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,20 +9,24 @@
 </head>
 
 <body>
-  <form class="form">
+  <form id="formulario">
     <p class="form-title">LOGIN</p>
-		<input type="text" name="username" id="username" placeholder="Ingrese usuario" required>
-    <input type="password" placeholder="Ingresa contraseña" required>
-    <button type="submit" id="login-btn">
+
+		<input type="email" id="username" placeholder="Ingrese usuario" required>
+    <input type="password" id="password" placeholder="Ingresa contraseña" required>
+
+    <button type="submit" id="login-btn" value="iniciar">
       <span>INICIAR SESION</span>
     </button>
     
-    <p class="registro-link">
+    <p id="registro-link">
       No tienes cuenta?
       <a href="">Registrate</a>
     </p>
+    
   </form>
   
+  <script src="../Javascript/Login.js"></script>
 </body>
 
 </html>
