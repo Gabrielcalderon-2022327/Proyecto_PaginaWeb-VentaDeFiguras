@@ -13,7 +13,7 @@ document.getElementById("formulario").addEventListener("submit", function(event)
     }
 
     if(email === in_email && contra === in_contra){
-        window.location.href= "https://www.youtube.com";
+        window.location.href= "../Html/index.html";
     } else{
         alert("Credenciales incorrectas");
     }
