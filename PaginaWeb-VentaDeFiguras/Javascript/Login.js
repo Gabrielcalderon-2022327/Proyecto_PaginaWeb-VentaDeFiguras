@@ -1,6 +1,9 @@
 const email = "gabriel@gmail.com";
 const contra = "12345";
+const contraInput = document.getElementById("password");
+const mostrarImg = document.getElementById("mostrarContra");
 
+// ----------------------------------Envio de datos
 document.getElementById("formulario").addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -16,5 +19,16 @@ document.getElementById("formulario").addEventListener("submit", function(event)
         window.location.href= "../Html/index.html";
     } else{
         alert("Credenciales incorrectas");
+    }
+})
+
+// --------------------------Mostrar y ocultar contra
+mostrarImg.addEventListener("click", () => {
+    if(contraInput.type === "password"){
+        contraInput.type = "text";
+        mostrarImg.src = "../Img/ojoCerrado.png"
+    } else{
+        contraInput.type = "password";
+        mostrarImg.src = "../Img/ojoAbierto.png"
     }
 })
