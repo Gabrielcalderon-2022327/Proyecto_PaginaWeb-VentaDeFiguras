@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../Img/fondo.jpg");
+    background-size: cover;
+    background-position: fixed;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ----------------------------------------------- Estilo para el header */
+.contenedor-header {
+    background: rgba(20, 20, 20);
+    margin: 0;
+    padding: 0.7rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+/* -----------------Imagen del logo*/
+.logo img {
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+/* -----------------Barra de busqueda*/
+.barra-busqueda{
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    overflow: hidden;
+    padding-left: 15px;
+    transition: 0.4s ease-in-out;
+}
+
+.barra-busqueda input {
+    width: 250px;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 0.9em;
+    background-color: black;
+    color: white;
+    caret-color: rgb(68, 0, 255);
+}
+
+.barra-busqueda:hover {
+    transform: scale(1.05);
+
+}
+
+.barra-busqueda:focus-within {
+    box-shadow:
+        0px 0px 30px rgba(131, 119, 209, 0.6),
+        0px 0px 60px rgba(131, 119, 209, 0.3);
+    transform: scale(1.15);
+
+}
+
+.barra-busqueda button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.barra-busqueda button img {
+    filter: invert(1);
+    object-fit: cover;
+}
+
+/* -----------------Iconos de la derecha*/
+.header-icons {
+    align-items: center;
+    display: flex;
+    gap: 6px;
+}
+
+.header-icons p{
+    color: white;
+    font-size: 1.2em;
+}
+
+.header-icons button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.4s ease-in-out;
+}
+
+.header-icons button:hover {
+    transform: scale(1.1);
+}
+
+.header-icons img {
+    filter: invert(1);
+    object-fit: cover;
+}
+
+main {
+    background: #ffecb3;
+    border: 3px solid #ffcc80;
+    border-radius: 5px;
+    padding: 8px;
+    flex-grow: 2;
+}
+
+footer {
+    background: #ffecb3;
+    border: 3px solid #ffcc80;
+    border-radius: 5px;
+    padding: 8px;
+    flex-grow: 0.3;
+    flex-shrink: 1;
+}
+
