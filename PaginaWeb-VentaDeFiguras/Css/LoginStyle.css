@@ -1,5 +1,7 @@
 body {
-    background-color: #141414;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../Img/fondo.jpg");
+    background-size: cover;
+    background-position: fixed;
     min-height: 100vh;
     margin: 0;
     display: flex;
