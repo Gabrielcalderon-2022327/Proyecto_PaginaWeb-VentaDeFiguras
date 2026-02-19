@@ -1,25 +1,40 @@
 body {
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../Img/fondo.jpg");
     background-size: cover;
-    background-position: fixed;
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: "Montserrat", sans-serif;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 /* ----------------------------------------------- Estilo para el header */
+header {
+    position: sticky;
+    z-index: 1000;
+    transition: all 0.5s ease;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+header.scrolled {
+    background-color: rgb(29, 29, 29, 0.8);  
+}
+
 .contenedor-header {
-    background: rgba(20, 20, 20);
+    background: transparent;
     margin: 0;
     padding: 0.7rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    
+
 }
 
 /* -----------------Imagen del logo*/
@@ -33,7 +48,7 @@ body {
 }
 
 /* -----------------Barra de busqueda*/
-.barra-busqueda{
+.barra-busqueda {
     display: flex;
     align-items: center;
     background-color: rgb(0, 0, 0);
@@ -87,7 +102,7 @@ body {
     gap: 6px;
 }
 
-.header-icons p{
+.header-icons p {
     color: white;
     font-size: 1.2em;
 }
@@ -109,13 +124,114 @@ body {
     object-fit: cover;
 }
 
-main {
-    background: #ffecb3;
-    border: 3px solid #ffcc80;
-    border-radius: 5px;
-    padding: 8px;
+/* ----------------------------------------------- Estilo para el contenido */
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    justify-items: center;
+    padding: 25px;
     flex-grow: 2;
 }
+
+/* -----------------Tarjeta*/
+.producto {
+    max-width: 300px;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    border: 1px solid transparent;
+    transition: 0.4s ease-in-out;
+    padding: 1px;
+    filter: brightness(0.8);
+    gap: 0;;
+}
+
+.producto:hover {
+    filter: brightness(1);
+    box-shadow:
+        0px 0px 30px rgba(131, 119, 209, 0.6),
+        0px 0px 60px rgba(131, 119, 209, 0.3);
+    transform: scale(1.05);
+}
+
+/* -----------------Textos*/
+.producto a {
+    text-decoration: none
+}
+
+.informacion {
+    padding: 0.5rem 1.1rem 1.1rem 1.1rem;
+}
+
+.titulo {
+    color: #111827;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+}
+
+.desc {
+    margin-top: 0.5rem;
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+/* -----------------Apartado de imagen*/
+.imagen {
+    object-fit: cover;
+    height: 150px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;  
+    align-items: center;
+}
+
+.imagen img{
+    object-fit: cover;
+    width: fit-content;
+    height: 120px;
+    background-color: rgb(0, 0, 0);
+    transition: all 0.4s ease-in-out;
+}
+
+.imagen:hover img{
+    filter: brightness(1.05);
+    transform: scale(1.05) translateY(-5px);
+}
+
+
+/* -----------------Boton*/
+.action {
+    display: inline-flex;
+    margin-top: 1rem;
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    align-items: center;
+    gap: 0.25rem;
+    background-color: rgb(131, 119, 209);
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: 0.4s ease-in-out;
+}
+
+.action:hover {
+    transform: scale(1.1);  
+}
+.action span {
+    transition: 0.4s ease;
+}
+
+.action:hover span {
+    transform: translateX(4px);
+}
+
 
 footer {
     background: #ffecb3;
@@ -125,4 +241,3 @@ footer {
     flex-grow: 0.3;
     flex-shrink: 1;
 }
-
