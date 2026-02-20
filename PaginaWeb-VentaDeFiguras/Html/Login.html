@@ -10,22 +10,22 @@
 </head>
 
 <body>
-  <form id="formulario">
+  <form id="formularioLogin" class="formulario">
     <p class="form-title" id="form-title">LOGIN</p>
 
-    <input type="email" id="username" placeholder="Ingrese usuario" required />
+    <input type="email" id="email" placeholder="Ingrese email" required />
     <div class="password-box">
       <input type="password" id="password" placeholder="Ingresa contraseña" required />
-      <img src="../Img/ojoAbierto.png" alt="" width="40px" id="mostrarContra" />
+      <img src="../Img/ojoAbierto.png" alt="" width="40px" id="mostrarImg" class="mostrarContra" />
     </div>
 
-    <button type="submit" id="login-btn" value="iniciar">
+    <button type="submit" class="login-btn" value="iniciar" id="registrar-btn">
       <span>INICIAR SESION</span>
     </button>
 
-    <p id="registro-link">
+    <p class="registro-link">
       No tienes cuenta?
-      <a href="">Registrate</a>
+      <a href="Register.html">Registrate</a>
     </p>
   </form>
 
