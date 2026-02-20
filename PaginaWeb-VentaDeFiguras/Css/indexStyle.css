@@ -23,7 +23,7 @@ header {
 }
 
 header.scrolled {
-    background-color: rgb(29, 29, 29, 0.8);  
+    background-color: rgb(29, 29, 29, 0.8);
 }
 
 .contenedor-header {
@@ -71,7 +71,6 @@ header.scrolled {
 
 .barra-busqueda:hover {
     transform: scale(1.05);
-
 }
 
 .barra-busqueda:focus-within {
@@ -143,7 +142,8 @@ header.scrolled {
     transition: 0.4s ease-in-out;
     padding: 1px;
     filter: brightness(0.8);
-    gap: 0;;
+    gap: 0;
+    ;
 }
 
 .producto:hover {
@@ -173,7 +173,7 @@ header.scrolled {
 
 .desc {
     margin-top: 0.5rem;
-    color: #6B7280;
+    color: #6b7280;
     font-size: 0.875rem;
     line-height: 1.25rem;
 }
@@ -187,11 +187,11 @@ header.scrolled {
     border-radius: 0.5rem;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: center;  
+    justify-content: center;
     align-items: center;
 }
 
-.imagen img{
+.imagen img {
     object-fit: cover;
     width: fit-content;
     height: 120px;
@@ -199,11 +199,10 @@ header.scrolled {
     transition: all 0.4s ease-in-out;
 }
 
-.imagen:hover img{
+.imagen:hover img {
     filter: brightness(1.05);
     transform: scale(1.05) translateY(-5px);
 }
-
 
 /* -----------------Boton*/
 .action {
@@ -222,8 +221,9 @@ header.scrolled {
 }
 
 .action:hover {
-    transform: scale(1.1);  
+    transform: scale(1.1);
 }
+
 .action span {
     transition: 0.4s ease;
 }
@@ -232,12 +232,10 @@ header.scrolled {
     transform: translateX(4px);
 }
 
-
 footer {
-    background: #ffecb3;
-    border: 3px solid #ffcc80;
-    border-radius: 5px;
-    padding: 8px;
+    background-color: rgb(29, 29, 29, 0.8);
+    color: white;
+    text-align: center;
     flex-grow: 0.3;
     flex-shrink: 1;
 }
