@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset=" UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="icon" href="../Img/favicon.png" />
+  <link rel="stylesheet" href="../Css/LoginStyle.css" />
+</head>
+
+<body>
+  <form id="formularioRegister" class="formulario">
+    <p class="form-title" id="form-title">REGISTER</p>
+
+    <input type="email" id="email" placeholder="Ingrese email" required />
+
+    <input type="text" id="username" placeholder="Ingrese nombre de usuario" required />
+
+    <div class="password-box">
+      <input type="password" id="password" placeholder="Ingresa contraseña" required minlength="8"/>
+      <img src="../Img/ojoAbierto.png" alt="" width="40px" id="mostrarImg" class="mostrarContra" />
+    </div>
+
+    <div class="password-box">
+      <input type="password" id="passwordConfirm" placeholder="Confirma contraseña" required minlength="8"/>
+      <img src="../Img/ojoAbierto.png" alt="" width="40px" id="mostrarImg2" class="mostrarContra" />
+    </div>
+
+    <button type="submit" class="login-btn" value="iniciar" id="registrar-btn">
+      <span>REGISTRAR</span>
+    </button>
+
+    <p class="registro-link">
+      Ya tienes cuenta?
+      <a href="Login.html">Inicia sesión</a>
+    </p>
+  </form>
+
+  <script src="../Javascript/Login.js"></script>
+</body>
+
+</html>
