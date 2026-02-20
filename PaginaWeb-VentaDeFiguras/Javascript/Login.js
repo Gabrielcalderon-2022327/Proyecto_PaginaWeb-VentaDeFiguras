@@ -1,34 +1,42 @@
-const email = "gabriel@gmail.com";
-const contra = "12345";
+const usuarios = {
+    user1: {
+        nombreUsuario: "Gabriel Calderon",
+        correo: "gabrielCalderon@gmail.com",
+        contra: "Abcd12345",
+    },
+    user2: {
+        nombreUsuario: "Alexander Monzon",
+        correo: "alexanderMonzon@gmail.com",
+        contra: "Xyz67890",
+    },
+};
 const contraInput = document.getElementById("password");
 const mostrarImg = document.getElementById("mostrarContra");
 
 // ----------------------------------Envio de datos
-document.getElementById("formulario").addEventListener("submit", function(event) {
+document.getElementById("formulario").addEventListener("submit", function (event) {
     event.preventDefault();
 
     const in_email = document.getElementById("username").value.trim();
     const in_contra = document.getElementById("password").value.trim();
 
-    if(!in_email.endsWith("@gmail.com") && !in_email.endsWith("@outlook.com") && !in_email.endsWith("@yahoo.com")){
-        alert("El correo debería tener estas extensiones: @gmail.com, @outlook.com, @yahoo.com");
-        return;
-    }
-
-    if(email === in_email && contra === in_contra){
-        window.location.href= "../Html/index.html";
-    } else{
-        alert("Credenciales incorrectas");
-    }
-})
+    usuarios.forEach((usuario) => {
+        if (in_email === usuario.correo && in_contra === usuario.contra) {
+            alert("Bienvenido " + usuario.nombreUsuario);
+            return;
+        } else {
+            alert("Usuario o contraseña incorrectos");
+        }
+    });
+});
 
 // --------------------------Mostrar y ocultar contra
 mostrarImg.addEventListener("click", () => {
-    if(contraInput.type === "password"){
+    if (contraInput.type === "password") {
         contraInput.type = "text";
-        mostrarImg.src = "../Img/ojoCerrado.png"
-    } else{
+        mostrarImg.src = "../Img/ojoCerrado.png";
+    } else {
         contraInput.type = "password";
-        mostrarImg.src = "../Img/ojoAbierto.png"
+        mostrarImg.src = "../Img/ojoAbierto.png";
     }
-})
+});
