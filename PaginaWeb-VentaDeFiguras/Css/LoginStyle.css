@@ -10,7 +10,7 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
-#formulario {
+#formularioLogin {
     background-color: #fff;
     padding: 1rem;
     border-radius: 0.5rem;
@@ -23,7 +23,20 @@ body {
     height: 450px;
 }
 
-#formulario:hover {
+#formularioRegister {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 450px;
+    height: 600px;
+}
+
+.formulario:hover {
     box-shadow:
         5px 5px 20px rgba(131, 119, 209, 0.6),
         5px 5px 40px rgba(131, 119, 209, 0.3);
@@ -60,7 +73,8 @@ input:focus {
     box-shadow: 5.5px 7px 0 black;
 }
 
-#login-btn {
+
+.login-btn {
     position: relative;
     display: flex;
     justify-content: center;
@@ -71,7 +85,7 @@ input:focus {
     border: none;
 }
 
-#login-btn:after {
+.login-btn:after {
     content: " ";
     width: 0%;
     height: 100%;
@@ -82,14 +96,14 @@ input:focus {
     right: 0;
 }
 
-#login-btn:hover::after {
+.login-btn:hover::after {
     right: auto;
     left: 0;
     border-radius: 5px;
     width: 100%;
 }
 
-#login-btn span {
+.login-btn span {
     text-align: center;
     text-decoration: none;
     width: 100%;
@@ -102,26 +116,26 @@ input:focus {
     transition: all 0.3s ease-in-out;
 }
 
-#login-btn:hover span {
+.login-btn:hover span {
     color: #000000;
 }
 
-#registro-link {
+.registro-link {
     color: #656c77;
     font-size: 1rem;
     line-height: 1.25rem;
     text-align: center;
 }
 
-#registro-link a {
+.registro-link a {
     text-decoration: none;
 }
 
-#registro-link a:hover {
+.registro-link a:hover {
     text-decoration: underline;
 }
 
-#mostrarContra {
+.mostrarContra {
     cursor: pointer;
 }
 
